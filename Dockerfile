@@ -39,6 +39,9 @@ RUN apt-get update && apt-get install -y \
 # Install renv package
 RUN Rscript -e 'install.packages("renv", repos="https://cran.rstudio.com")'
 
+#Install ggplot2 package
+RUN Rscript -e 'install.packages("ggplot2", repos="https://cran.rstudio.com")'
+
 # Switch back to rstudio user to maintain best practices
 USER rstudio
 
@@ -54,5 +57,3 @@ EXPOSE 8787
 
 # Set default command
 CMD ["/init"]
-
-#new comment for change
