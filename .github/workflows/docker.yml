@@ -30,7 +30,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: michaeltham/dsci310-dockerfile-practice
+          images: michaeltham/dsci310-ia3-miketham24-docker
           tags: |
             type=raw, value={{sha}},enable=${{github.ref_type != 'tag' }}
             type=raw, value=latest
